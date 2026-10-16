@@ -6,4 +6,4 @@ FROM ubuntu
 FROM mysql
 FROM elasticsearch
 FROM neo4j
-FROM jenkins
+
