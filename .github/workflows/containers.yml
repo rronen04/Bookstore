@@ -6,6 +6,11 @@ on:
     paths:
       - "goat-dockerfile-helm-compose-with-extractor/**"
       - ".github/workflows/build-sample-app.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "goat-dockerfile-helm-compose-with-extractor/**"
+      - ".github/workflows/build-sample-app.yml"
   workflow_dispatch:
 
 permissions:
