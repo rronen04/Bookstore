@@ -4,7 +4,7 @@ FROM node:14.17.0-alpine
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm ci --omit=dev --no-audit --no-fund || npm ci --production --no-audit
+RUN npm ci --production --no-audit
 
 COPY server.js ./
 COPY views ./views
