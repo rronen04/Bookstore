@@ -20,7 +20,7 @@ permissions:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: sample-app
-  BUILD_DIR: vulnerable-app
+  BUILD_DIR: vulnerable
 
 jobs:
   build-and-push:
