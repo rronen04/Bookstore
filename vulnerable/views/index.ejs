@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head><title>Vulnerable Demo App</title></head>
+<body>
+  <h1>Vulnerable Demo App</h1>
+  <p>Server time: <%= now %></p>
+  <ul>
+    <li>GET /healthz</li>
+    <li>POST /settings</li>
+    <li>GET /date?d=2024-01-01</li>
+    <li>GET /token?user=alice, GET /verify?t=...</li>
+    <li>GET /greet?name=you</li>
+    <li>POST /markdown</li>
+    <li>GET /outbound</li>
+  </ul>
+</body>
+</html>

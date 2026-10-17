@@ -1,0 +1,22 @@
+{
+  "name": "vulnerable-app",
+  "version": "1.0.0",
+  "description": "Intentionally vulnerable demo app for SCA / container scanning labs. DO NOT use in production.",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "0.21.0",
+    "ejs": "3.1.6",
+    "express": "4.16.0",
+    "handlebars": "4.5.3",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.15",
+    "marked": "0.3.6",
+    "minimist": "1.2.5",
+    "moment": "2.29.1",
+    "node-fetch": "2.6.0"
+  }
+}
