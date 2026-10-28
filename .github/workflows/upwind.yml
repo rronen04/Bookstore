@@ -2,7 +2,7 @@ name: Build and scan
 
 on:
   pull_request:
-    branches: [feature]
+    branches: [feature3]
 
 jobs:
   build:
