@@ -1,0 +1,28 @@
+name: Build and scan
+
+on:
+  pull_request:
+    branches: [feature3]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the image
+        run: docker build -t myapp:${{ github.sha }} .
+
+      - name: Upwind image scan
+        uses: upwindsecurity/shiftleft-create-image-scan-event-action@main
+        with:
+          docker_image: myapp:${{ github.sha }}
+          pull_image: false
+          main_branch: ${{ github.base_ref }}
+          pr_id: ${{ github.event.number }}
+          add_comment: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_number: ${{ github.event.number }}
+          repo_name: ${{ github.repository }}
+          upwind_client_id: ${{ secrets.UPWIND_CLIENT_ID }}
+          upwind_client_secret: ${{ secrets.UPWIND_CLIENT_SECRET }}
