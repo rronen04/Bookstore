@@ -21,7 +21,7 @@ jobs:
           main_branch: ${{ github.base_ref }}
           pr_id: ${{ github.event.number }}
           add_comment: true
-          github_token: ${{ secrets.GITHUBTOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           pr_number: ${{ github.event.number }}
           repo_name: ${{ github.repository }}
           upwind_client_id: ${{ secrets.UPWIND_CLIENT_ID }}
