@@ -10,13 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build the image
-        run: docker build -t myapp:${{ github.sha }} .
-
       - name: Upwind image scan
         uses: upwindsecurity/shiftleft-create-image-scan-event-action@main
         with:
-          docker_image: myapp:${{ github.sha }}
+          docker_image: ghcr.io/rronen04/sample-app:c3cd5c2a65383d6aec9409d50ac8012bd5a90d72
           pull_image: false
           main_branch: ${{ github.base_ref }}
           pr_id: ${{ github.event.number }}
